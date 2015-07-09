@@ -32,7 +32,19 @@ ii) V click button to join game. C. update game. -> V. both players to game page
 
 --------------------
 
-i) V. click button to create game -> C. create game, direct to lobby. V. displayed updated index page.
+i) V. click button to create game ->
+-login/signup erb -J
+- erb user_login > /login -J
+- erb user_signup > /user/new -J
+- post '/user/new' -A (params['user'])
+- get '/login' -A (email, password)
+-index.erb -J
+-post '/' => create GAME. -A (params['user_id']) -> index
+-post '/game/new' => update game. => erb game page
+-erb games -J
+
+
+ V. displayed updated index page.
 ii) V click button to join game. C. update game. -> V. both players to game page.
 - game page will display board, player turn.
 -when player 1 click x -> update to controller. C. update game. send data to V. for both players. repeat until winner condition met in C.
